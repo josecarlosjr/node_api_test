@@ -24,7 +24,7 @@ pipeline {
              
                 script {
                     //myapp = docker.build("josecarlosjr/hellowhale:${env.BUILD_ID}")
-                    myapp = docker.build("josecarlosjr/backend_test")
+                    myapp = docker.build("josecarlosjr/node_api_test")
                 }
             }
         }
