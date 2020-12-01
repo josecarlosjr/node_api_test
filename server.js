@@ -1,55 +1,36 @@
-import express from 'express';
-import bodyParser from 'body-parser';
+/*o node.js tem dificuldades para entender ES6 
+por exemplo o uso do import express from 'express'
+para utilizar o import é necessario instalar alguns pacotes
+npm install --save-dev @babel/core @babel/node @babel/preset-env
+e para executar utilize o comando 
+npx babel-node server.js
+*/
 
-//npx nodemon --exec npx babel-node <nome do arq> 
+const express = require('express');
+var router = express.Router();
+// var cors = require("cors");
 
-//fake db
-const articleInfo = {
-    'learn-react': {
-        upvotes: 0,
-        comments: [],        
-    },
-    'learn-node' : {
-        upvotes: 0,
-        comments: [],
-    },
-    'my-thoughts-on-resumes': {
-        upvotes: 0,
-        comments: [],
-    },
-}
+//explicacao no repositorio nodejs
+//executar utilizando o comando node <nome_do_app>
 
+//const express = require('express');
 
-
-
-//const express = require('express')
 const app = express();
+// app.use(cors());
 
-app.use(bodyParser.json());
+//app.use(express.json()); // para que o request.body consiga interpretar o JSON
 
-var Array = []
-
-app.post('/api/articles/:nome/upvotes', (req, res) => {
-    const articleName = req.params.nome;
-    articleInfo[articleName].upvotes = articleInfo[articleName].upvotes + 1
-    
-    res.status(200).send(`Existe o artigo ${articleName} e agora tem ${articleInfo[articleName].upvotes}`)
+app.get ("/", function(req, res, next){
+    res.send("Home Page");
 });
 
-app.post( "/api/:artigo", (req, res) =>  {
-    const artigo = req.params.artigo
-    res.send(`O nome do artigo é ${artigo}`)
+app.get("/Noticias", function(req, res, next) {
+    res.send("Noticias aqui");
+
 });
 
-app.get("/", (req, res) => { 
-     res.send('Hello Node.js')
-     }
- );
+module.exports = router;
 
- app.get("/second", (req, res) => { 
-     res.send('Hello')
-     }
- );
 
 /* app.post("/ola", (req, res) => {
      res.send(`Ola  ${req.body.name}` )
