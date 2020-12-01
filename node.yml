@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: node-api-test-container
-        image: josecarlosjr/backend_test:latest
+        image: josecarlosjr/node_api_test:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
