@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-api-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-api-test
+      version: blue
+  template:
+    metadata:
+      name: node-api-test-pod
+      labels:
+        app: node-api-test
+        version: blue
+    spec:
+      containers:
+      - name: node-api-test-container
+        image: josecarlosjr/backend_test:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service 
+metadata:
+  name: node-api-test-svc
+  labels:
+    app: node-api-test
+spec:
+  selector:
+    app: node-api-test
+    version: blue
+  type: NodePort
+  ports:
+  - nodePort: 31112
+    port: 80
+    targetPort: 80
