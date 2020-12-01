@@ -7,7 +7,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/josecarlosjr/node_api_test.git', branch:'master'
+        git url:'https://github.com/josecarlosjr/node_api_test.git', branch:'main'
       }
     }
     
