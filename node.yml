@@ -17,7 +17,7 @@ spec:
         version: blue
     spec:
       containers:
-      - name: node-api-test-container
+      - name: node-api-test
         image: josecarlosjr/node_api_test:latest
         imagePullPolicy: IfNotPresent
         ports:
