@@ -9,8 +9,10 @@ pipeline {
                 kind: Pod
                 metadata:
                   labels:
-                    some-label: jnlp
+                    label: jnlp
                 spec:
+                  securityContext:
+                    runAsUser: 0
                   containers:
                   - name: jnlp
                     image: jenkins/inbound-agent:alpine
