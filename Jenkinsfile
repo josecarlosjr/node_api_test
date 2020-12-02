@@ -25,10 +25,16 @@ pipeline {
                         memory: "1Gi"
                         cpu: "500m"
                         ephemeral-storage: "2Gi"
+                    volumeMounts:
+                    - name: dockersock
+                      mountPath: "/var/run/docker.sock"
+                  volumes:
+                  - name: dockersock
+                    hostPath:
+                      path: /var/run/docker.sock
                 """
     }
   } 
-  
   stages {
 
     stage('Checkout Source') {
@@ -65,7 +71,6 @@ pipeline {
                 }
             }
         }
-
     
     stage('Deploy App') {
       steps {
@@ -74,7 +79,5 @@ pipeline {
         }
       }
     }
-
   }
-
 }
