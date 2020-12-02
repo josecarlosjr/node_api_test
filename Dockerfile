@@ -15,8 +15,8 @@ COPY . /app
 CMD ["node", "server.js"]
 
 # production environment
-FROM nginx:stable-alpine
-# FROM nginx:1.17.9-alpine
-COPY --from=build /app/ /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+#FROM nginx:stable-alpine
+
+#COPY --from=build /app/ /usr/share/nginx/html
+#EXPOSE 80
+#CMD ["nginx", "-g", "daemon off;"]
