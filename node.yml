@@ -29,7 +29,7 @@ metadata:
   name: node-api-test
   labels:
     app: node-api-test
-    service: node-api-test
+    #service: node-api-test
 spec:
   selector:
     app: node-api-test
