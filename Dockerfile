@@ -12,8 +12,8 @@ RUN npm install --silent
 COPY . /app
 EXPOSE 3333 
 #RUN npm run build
-CMD ["node", "server.js"]
-
+#CMD ["node", "server.js"]
+CMD ["npm","start"]
 # production environment
 #FROM nginx:stable-alpine
 #COPY --from=build /app/ /usr/share/nginx/html
