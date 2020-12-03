@@ -29,7 +29,7 @@ metadata:
   name: node-api-test
   labels:
     app: node-api-test
-    #service: node-api-test
+    service: node-api-test
 spec:
   selector:
     app: node-api-test
@@ -64,7 +64,7 @@ spec:
             name: node-api-test
             port:
               number: 3333
-      - path: /Noticias
-        pathType: Prefix
-          serviceName: node-api-test
-          servicePort: 3333
+      #- path: /Noticias
+      #  pathType: Prefix
+      #    serviceName: node-api-test
+      #    servicePort: 3333
