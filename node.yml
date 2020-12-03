@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service 
 metadata:
-  name: node-api-test-svc
+  name: node-api-test
   labels:
     app: node-api-test
     service: node-api-test
@@ -40,3 +40,5 @@ spec:
   - port: 80
     targetPort: 3333
     protocol: TCP
+  selector:
+    app: node-api-test
