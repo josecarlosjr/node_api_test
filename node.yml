@@ -44,7 +44,7 @@ spec:
     app: node-api-test
 
 ---
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: node-api-test-ingress
@@ -58,12 +58,11 @@ spec:
     http:
       paths:
       - path: /
-        pathType: Prefix
+        #pathType: Prefix
         backend:
-          service:
-            name: node-api-test
-            port:
-              number: 3333
+          serviceName: node-api-test
+            servicePort: 3333
+              #number: 3333
       #- path: /Noticias
       #  pathType: Prefix
       #    serviceName: node-api-test
