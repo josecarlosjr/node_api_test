@@ -66,6 +66,6 @@ spec:
               number: 3333
       - path: /Noticias
         pathType: Prefix
-	backend: 
+	backend:
           serviceName: node-api-test
           servicePort: 3333
