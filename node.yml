@@ -29,12 +29,15 @@ metadata:
   name: node-api-test-svc
   labels:
     app: node-api-test
+    service: node-api-test-svc
 spec:
   selector:
     app: node-api-test
     version: blue
-  type: NodePort
+  #type: NodePort
+  type: ClusterIP
   ports:
-  - nodePort: 31112
-    port: 80
+  #- nodePort: 31112
+  - port: 80
     targetPort: 3333
+    protocol: TCP
