@@ -42,3 +42,29 @@ spec:
     protocol: TCP
   selector:
     app: node-api-test
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: node-api-test-ingress
+  namespace: 
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  #type: NodePort
+  rules:
+  - host: node-api-test
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: node-api-test
+            port:
+              number: 3333
+      - path: /Noticias
+				backend: 
+          serviceName: node-api-test
+          servicePort: 3333
