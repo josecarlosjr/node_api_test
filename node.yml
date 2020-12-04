@@ -37,8 +37,8 @@ spec:
   type: ClusterIP
   #type: NodePort
   ports:
-  - port: 80
-    targetPort: 3333
+  - port: 3333
+    targetPort: 80
     protocol: TCP
   selector:
     app: node-api-test
@@ -52,10 +52,10 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/server-snippet: |
-      location = / {       
-        proxy_pass http://localhost:3333/;
-      }
+    #nginx.ingress.kubernetes.io/server-snippet: |
+    #  location = / {       
+    #    proxy_pass http://localhost:3333/;
+    #  }
 spec:
   #type: NodePort
   rules:
