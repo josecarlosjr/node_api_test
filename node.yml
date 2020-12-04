@@ -58,10 +58,12 @@ spec:
     http:
       paths:
       - path: /
-        #pathType: Prefix
+        pathType: Prefix
         backend:
-          serviceName: node-api-test
-          servicePort: 3333
+          service:
+            name: node-api-test
+            port:
+              number: 80
               #number: 3333
       #- path: /Noticias
       #  pathType: Prefix
