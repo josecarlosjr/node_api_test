@@ -34,7 +34,7 @@ spec:
   selector:
     app: node-api-test
     version: blue
-  type: ClusterIP
+  type: LoadBalancer
   #type: NodePort
   ports:
   - port: 80
