@@ -34,8 +34,8 @@ spec:
   selector:
     app: node-api-test
     version: blue
-  type: ClusterIP
-  #type: NodePort
+  #type: ClusterIP
+  type: NodePort
   ports:
   - port: 80
     targetPort: 3333
