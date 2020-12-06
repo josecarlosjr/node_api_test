@@ -61,7 +61,7 @@ metadata:
 spec:
   #type: NodePort
   rules:
-  - host: node-api-test.local
+  - host: node-api-test
     http:
       paths:
       - path: /
