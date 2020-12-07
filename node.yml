@@ -37,7 +37,7 @@ spec:
   type: ClusterIP
   #type: NodePort
   ports:
-  - port: 3333
+  - port: 80
     targetPort: 3333
     protocol: TCP
   selector:
