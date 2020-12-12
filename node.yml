@@ -49,8 +49,10 @@ kind: Ingress
 metadata:
   name: node-api-test-ingress
   namespace: 
-  #annotations:
-    #kubernetes.io/ingress.class: nginx
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true",  
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
     #nginx.ingress.kubernetes.io/rewrite-target: /
     #nginx.ingress.kubernetes.io/proxy-redirect-from: http://node-test-api/
     #nginx.ingress.kubernetes.io/proxy-redirect-to: http://10.104.14.234:3333
