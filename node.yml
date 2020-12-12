@@ -60,7 +60,11 @@ metadata:
     #  location = / {       
     #    proxy_pass http://localhost:3333/;
     #  }
-spec:
+spec:  
+  tls:
+  - hosts:
+      - node-api-test
+    secretName: proxy-ca-secret
   #type: NodePort
   rules:
   - host: node-api-test
