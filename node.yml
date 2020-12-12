@@ -64,7 +64,7 @@ spec:
   tls:
   - hosts:
       - node-api-test
-    secretName: proxy-ca-secret
+    secretName: nginx-ssl
   #type: NodePort
   rules:
   - host: node-api-test
