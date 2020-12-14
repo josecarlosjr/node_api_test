@@ -41,7 +41,9 @@ spec:
   - port: 80
     targetPort: 3333
     protocol: TCP
+    name: http
   - port: 443
+    targetPort: 443
     protocol: TCP
     name: https
   selector:
