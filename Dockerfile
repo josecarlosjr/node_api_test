@@ -11,6 +11,7 @@ RUN npm install --silent
 # RUN npm install react-scripts@3.4.1 -g --silent
 COPY . /app
 EXPOSE 3333 
+EXPOSE 443
 #RUN npm run build
 #CMD ["node", "server.js"]
 CMD ["npm","start"]
