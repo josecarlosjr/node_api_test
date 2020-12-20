@@ -21,11 +21,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: kubernetes.io/hostname
+              - key: kubernetes.io/name
                 operator: In
                 values:
                 - n0d3-1
-    spec:
       containers:
       - name: node-api-test
         image: josecarlosjr/node_api_test:latest
@@ -38,7 +37,7 @@ spec:
           limits:  
             memory: "200Mi"
             cpu: "200m"
-            ephemeral-storage: "500Mi
+            ephemeral-storage: "500Mi"
         ports:
         - containerPort: 3333
           hostPort: 3333
