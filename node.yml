@@ -16,6 +16,16 @@ spec:
         app: node-api-test
         version: blue
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - n0d3-1
+    spec:
       containers:
       - name: node-api-test
         image: josecarlosjr/node_api_test:latest
