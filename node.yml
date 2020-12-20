@@ -21,7 +21,7 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key:"name"
+              - key: label
                 operator: In
                 values:
                 - n0d3-1
