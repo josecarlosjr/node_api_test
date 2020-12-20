@@ -30,6 +30,15 @@ spec:
       - name: node-api-test
         image: josecarlosjr/node_api_test:latest
         imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+            ephemeral-storage: "100Mi"
+          limits:  
+            memory: "200Mi"
+            cpu: "200m"
+            ephemeral-storage: "500Mi
         ports:
         - containerPort: 3333
           hostPort: 3333
