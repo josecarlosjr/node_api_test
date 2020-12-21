@@ -26,7 +26,7 @@ spec:
       #          values:
       #          - n0d3-1
       nodeSelector:
-        kubernetes.io/hostname: n0d3-1
+        kubernetes.io/hostname: n0d3-2
       containers:
       - name: node-api-test
         image: josecarlosjr/node_api_test:latest
