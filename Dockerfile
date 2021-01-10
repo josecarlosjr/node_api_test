@@ -3,7 +3,7 @@
 #COPY *.* /usr/share/nginx/html
 #CMD ["./wrapper.sh"]
 
-FROM node:lts-alpine as build
+FROM node:lts-alpine #as build
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
