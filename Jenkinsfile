@@ -13,6 +13,8 @@ pipeline {
                 spec:
                   securityContext:
                     runAsUser: 0
+                  nodeSelector:
+                    kubernetes.io/hostname: n0d3-1
                   containers:
                   - name: jnlp
                     image: jenkins/inbound-agent:alpine
