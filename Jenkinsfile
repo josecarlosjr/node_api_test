@@ -23,8 +23,8 @@ pipeline {
                         ephemeral-storage: "1Gi"
                       limits:
                         memory: "1Gi"
-                        cpu: "500m"
-                        ephemeral-storage: "2Gi"
+                        cpu: "700m"
+                        ephemeral-storage: "3Gi"
                     volumeMounts:
                     - name: dockersock
                       mountPath: "/var/run/docker.sock"
