@@ -20,11 +20,11 @@ pipeline {
                     image: jenkins/inbound-agent:alpine
                     resources:
                       requests:
-                        memory: "512Mi"
+                        memory: "1Gi"
                         cpu: "100m"
                         ephemeral-storage: "2Gi"
                       limits:
-                        memory: "1Gi"
+                        memory: "2Gi"
                         cpu: "700m"
                         ephemeral-storage: "3Gi"
                     volumeMounts:
