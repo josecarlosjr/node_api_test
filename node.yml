@@ -42,9 +42,9 @@ spec:
             ephemeral-storage: "500Mi"
         ports:
         - containerPort: 3333
-          hostPort: 3333
+          #hostPort: 3333
         - containerPort: 443
-          hostPort: 443
+          #hostPort: 443
 ---
 apiVersion: v1
 kind: Service 
