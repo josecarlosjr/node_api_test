@@ -1,15 +1,15 @@
 #FROM nginx
 #COPY wrapper.sh /
 #COPY *.* /usr/share/nginx/html
-#CMD ["./wrapper.sh"] #as build
+#CMD ["./wrapper.sh"] #as build --silent
 
 FROM node:lts-alpine 
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
-RUN apk update --no-cache
-RUN npm install --silent
+#RUN apk update --no-cache
+RUN npm install 
 # RUN npm install react-scripts@3.4.1 -g --silent
 COPY . /app
 EXPOSE 3333 
