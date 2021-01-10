@@ -20,7 +20,7 @@ pipeline {
                       requests:
                         memory: "512Mi"
                         cpu: "100m"
-                        ephemeral-storage: "1Gi"
+                        ephemeral-storage: "2Gi"
                       limits:
                         memory: "1Gi"
                         cpu: "700m"
