@@ -106,7 +106,7 @@ spec:
           servicePort: 3333
           servicePort: 443
 #              #number: 3333
-      - path: /Noticias
+#      - path: /Noticias
 #      #  pathType: Prefix
-          serviceName: node-api-test
-          servicePort: 3333
+#          serviceName: node-api-test
+#          servicePort: 3333
