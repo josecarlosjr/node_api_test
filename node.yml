@@ -41,7 +41,7 @@ spec:
             cpu: "200m"
             ephemeral-storage: "500Mi"
         ports:
-        - containerPort: 80
+        - containerPort: 3333
           #hostPort: 3333
         - containerPort: 443
           #hostPort: 443
@@ -60,8 +60,8 @@ spec:
   type: ClusterIP
   #type: NodePort
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 3333
+    targetPort: 3333
     protocol: TCP
     name: http
   - port: 443
@@ -103,7 +103,7 @@ spec:
         #pathType: Prefix
         backend:
           serviceName: node-api-test
-          servicePort: 80
+          servicePort: 3333
           servicePort: 443
 #              #number: 3333
 #      - path: /Noticias
