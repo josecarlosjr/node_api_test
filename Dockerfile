@@ -1,4 +1,4 @@
-FROM nginx
+FROM node:15-buster
 #COPY wrapper.sh /
 #COPY *.* /usr/share/nginx/html
 #CMD ["./wrapper.sh"] #as build --silent
