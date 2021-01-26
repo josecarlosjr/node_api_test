@@ -1,4 +1,4 @@
-FROM node
+FROM node:current-buster-slim
 #COPY wrapper.sh /
 #COPY *.* /usr/share/nginx/html
 #CMD ["./wrapper.sh"] #as build --silent
