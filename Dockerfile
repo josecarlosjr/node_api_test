@@ -1,9 +1,9 @@
-#FROM nginx
+FROM nginx
 #COPY wrapper.sh /
 #COPY *.* /usr/share/nginx/html
 #CMD ["./wrapper.sh"] #as build --silent
 
-FROM node:lts-alpine 
+#FROM node:lts-alpine 
 
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
