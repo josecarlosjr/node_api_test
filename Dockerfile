@@ -12,6 +12,7 @@ COPY package.json /app/package.json
 RUN npm install 
 # RUN npm install react-scripts@3.4.1 -g --silent
 COPY . /app
+EXPOSE 80
 EXPOSE 3333 
 EXPOSE 443
 #RUN npm run build
