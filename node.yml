@@ -45,7 +45,7 @@ spec:
           #hostPort: 3333
         - containerPort: 443
           #hostPort: 443
-        - containerPort: 80
+        
 ---
 apiVersion: v1
 kind: Service 
@@ -61,7 +61,7 @@ spec:
   type: ClusterIP
   #type: NodePort
   ports:
-  - port: 80
+  - port: 3333
     targetPort: 3333
     protocol: TCP
     name: http
@@ -103,8 +103,7 @@ spec:
       - path: /
         #pathType: Prefix
         backend:
-          serviceName: node-api-test
-          servicePort: 80
+          serviceName: node-api-test          
           servicePort: 443
           servicePort: 3333
 #              #number: 3333
