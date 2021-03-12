@@ -77,7 +77,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          kubernetesDeploy(configs: "node.yml", kubeconfigId: "config", deleteResource: true)
+          //kubernetesDeploy(configs: "node.yml", kubeconfigId: "config", deleteResource: true)
           kubernetesDeploy(configs: "node.yml", kubeconfigId: "config")
         }
       }
