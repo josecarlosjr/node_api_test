@@ -78,7 +78,8 @@ pipeline {
       steps {
         script {
           //kubernetesDeploy(configs: "node.yml", kubeconfigId: "config", deleteResource: true)
-          kubernetesDeploy(configs: "node.yml", kubeconfigId: "config")
+          kubernetesDeploy(configs: "namespace.yaml", kubeconfigId: "kubeconfig")
+          kubernetesDeploy(configs: "node.yml", kubeconfigId: "kubeconfig")
         }
       }
     }
